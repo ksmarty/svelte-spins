@@ -1,0 +1,88 @@
+<script lang="ts">
+    export let classes: string = "";
+    export let style: string = "";
+</script>
+
+<style>
+    @-webkit-keyframes line-scale-party {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        50% {
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+        }
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+    @keyframes line-scale-party {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        50% {
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+        }
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+    .line-scale-party > div:nth-child(1) {
+        -webkit-animation-delay: 0.48s;
+        animation-delay: 0.48s;
+        -webkit-animation-duration: 0.54s;
+        animation-duration: 0.54s;
+    }
+
+    .line-scale-party > div:nth-child(2) {
+        -webkit-animation-delay: -0.15s;
+        animation-delay: -0.15s;
+        -webkit-animation-duration: 1.15s;
+        animation-duration: 1.15s;
+    }
+
+    .line-scale-party > div:nth-child(3) {
+        -webkit-animation-delay: 0.04s;
+        animation-delay: 0.04s;
+        -webkit-animation-duration: 0.77s;
+        animation-duration: 0.77s;
+    }
+
+    .line-scale-party > div:nth-child(4) {
+        -webkit-animation-delay: -0.12s;
+        animation-delay: -0.12s;
+        -webkit-animation-duration: 0.61s;
+        animation-duration: 0.61s;
+    }
+
+    .line-scale-party > div {
+        background-color: #fff;
+        width: 4px;
+        height: 35px;
+        border-radius: 2px;
+        margin: 2px;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        display: inline-block;
+        -webkit-animation-name: line-scale-party;
+        animation-name: line-scale-party;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-delay: 0;
+        animation-delay: 0;
+    }
+</style>
+
+<div class={'line-scale-party ' + classes} {style}>
+    <div />
+    <div />
+    <div />
+    <div />
+</div>
