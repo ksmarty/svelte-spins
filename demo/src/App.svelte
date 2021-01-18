@@ -62,51 +62,69 @@
 		background: #0f0e17;
 		color: #fffffe;
 	}
+
+	:global(code) {
+		cursor: pointer;
+	}
+
+	:global(pre) {
+		background: none !important;
+	}
+
+	:global(.hljs > code) {
+		background: none !important;
+	}
+
 	.header {
 		text-align: center;
 		margin-top: 15rem;
 	}
+
 	.title {
 		margin-bottom: 3rem;
 	}
+
 	.bold {
 		font-weight: bold;
 	}
+
 	.section-title {
 		font-size: 1.5rem;
 		letter-spacing: 0.2rem;
 		text-transform: uppercase;
 		font-weight: 600;
 	}
+
 	hr {
 		margin: 5rem 0 5rem 0;
 	}
+
 	main {
 		padding-bottom: 15rem;
 	}
+
 	.row {
 		margin-top: 2rem;
 	}
-	:global(code) {
-		cursor: pointer;
-	}
-	:global(pre) {
-		background: none !important;
-	}
+
 	a:link {
 		text-decoration: none;
 	}
+
 	a {
 		color: #f25f4c !important;
 	}
+
 	.loader-example {
 		margin: 7rem 0 7rem 0;
 	}
+
 	.center {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
+
 	.button-primary,
 	.button-primary:hover {
 		background: #f25f4c !important;
@@ -126,10 +144,6 @@
 		border: none;
 		padding: 0.5rem;
 		color: black;
-	}
-
-	:global(.hljs > code) {
-		background: none !important;
 	}
 </style>
 
