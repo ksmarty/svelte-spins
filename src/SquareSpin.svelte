@@ -1,6 +1,7 @@
 <script lang="ts">
     export let classes: string = "";
     export let style: string = "";
+    export let color: string = "black";
 </script>
 
 <style>
@@ -58,5 +59,5 @@
 </style>
 
 <div class={'square-spin ' + classes} {style}>
-    <div />
+    <div style="background-color: {color};" />
 </div>

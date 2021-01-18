@@ -1,6 +1,7 @@
 <script lang="ts">
     export let classes: string = "";
     export let style: string = "";
+    export let color: string = "black";
 </script>
 
 <style>
@@ -52,7 +53,6 @@
         width: 10px;
         height: 10px;
         border-radius: 100%;
-        border: 1px solid #fff;
     }
     .ball-triangle-path > div:nth-of-type(1) {
         top: 50px;
@@ -156,7 +156,7 @@
 </style>
 
 <div class={'ball-triangle-path ' + classes} {style}>
-    <div />
-    <div />
-    <div />
+    <div style="background-color: {color}; border: 1px solid {color};" />
+    <div style="background-color: {color}; border: 1px solid {color};" />
+    <div style="background-color: {color}; border: 1px solid {color};" />
 </div>

@@ -1,6 +1,7 @@
 <script lang="ts">
     export let classes: string = "";
     export let style: string = "";
+    export let color: string = "black";
 </script>
 
 <style>
@@ -50,7 +51,6 @@
         animation-delay: -0.2s;
     }
     .ball-scale-multiple > div {
-        background-color: #fff;
         width: 15px;
         height: 15px;
         border-radius: 100%;
@@ -70,7 +70,7 @@
 </style>
 
 <div class={'ball-scale-multiple ' + classes} {style}>
-    <div />
-    <div />
-    <div />
+    <div style="background-color: {color};" />
+    <div style="background-color: {color};" />
+    <div style="background-color: {color};" />
 </div>

@@ -1,6 +1,7 @@
 <script lang="ts">
     export let classes: string = "";
     export let style: string = "";
+    export let color: string = "black";
 </script>
 
 <style>
@@ -107,9 +108,6 @@
         width: 0px;
         height: 0px;
         border-right: 25px solid transparent;
-        border-top: 25px solid #fff;
-        border-left: 25px solid #fff;
-        border-bottom: 25px solid #fff;
         border-radius: 25px;
         -webkit-animation: rotate_pacman_half_up 0.5s 0s infinite;
         animation: rotate_pacman_half_up 0.5s 0s infinite;
@@ -120,9 +118,6 @@
         width: 0px;
         height: 0px;
         border-right: 25px solid transparent;
-        border-top: 25px solid #fff;
-        border-left: 25px solid #fff;
-        border-bottom: 25px solid #fff;
         border-radius: 25px;
         -webkit-animation: rotate_pacman_half_down 0.5s 0s infinite;
         animation: rotate_pacman_half_down 0.5s 0s infinite;
@@ -134,7 +129,6 @@
     .pacman > div:nth-child(4),
     .pacman > div:nth-child(5),
     .pacman > div:nth-child(6) {
-        background-color: #fff;
         width: 15px;
         height: 15px;
         border-radius: 100%;
@@ -150,9 +144,11 @@
 </style>
 
 <div class={'pacman ' + classes} {style}>
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
+    <div
+        style="border-top: 25px solid {color}; border-left: 25px solid {color}; border-bottom: 25px solid {color};" />
+    <div
+        style="border-top: 25px solid {color}; border-left: 25px solid {color}; border-bottom: 25px solid {color};" />
+    <div style="background-color: {color};" />
+    <div style="background-color: {color};" />
+    <div style="background-color: {color};" />
 </div>

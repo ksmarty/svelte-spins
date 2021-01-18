@@ -1,6 +1,7 @@
 <script lang="ts">
     export let classes: string = "";
     export let style: string = "";
+    export let color: string = "black";
 </script>
 
 <style>
@@ -16,12 +17,6 @@
         border-radius: 100%;
         -webkit-animation: spin-rotate 0.6s 0s infinite linear;
         animation: spin-rotate 0.6s 0s infinite linear;
-        background-image: linear-gradient(
-            transparent 0%,
-            transparent 70%,
-            #fff 30%,
-            #fff 100%
-        );
         width: 100%;
         height: 100%;
     }
@@ -57,5 +52,6 @@
 </style>
 
 <div class={'semi-circle-spin ' + classes} {style}>
-    <div />
+    <div
+        style="background-image: linear-gradient(transparent 0%, transparent 70%, {color} 30%, {color} 100%);" />
 </div>

@@ -1,6 +1,7 @@
 <script lang="ts">
     export let classes: string = "";
     export let style: string = "";
+    export let color: string = "black";
 </script>
 
 <style>
@@ -72,5 +73,5 @@
 </style>
 
 <div class={'ball-scale ' + classes} {style}>
-    <div />
+    <div style="background-color: {color};" />
 </div>

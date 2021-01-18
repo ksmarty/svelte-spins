@@ -1,6 +1,7 @@
 <script lang="ts">
     export let classes: string = "";
     export let style: string = "";
+    export let color: string = "black";
 </script>
 
 <style>
@@ -96,12 +97,12 @@
 </style>
 
 <div class={'ball-spin-fade-loader ' + classes} {style}>
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
+    <div style="background-color: {color};" />
+    <div style="background-color: {color};" />
+    <div style="background-color: {color};" />
+    <div style="background-color: {color};" />
+    <div style="background-color: {color};" />
+    <div style="background-color: {color};" />
+    <div style="background-color: {color};" />
+    <div style="background-color: {color};" />
 </div>

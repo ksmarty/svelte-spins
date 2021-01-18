@@ -5,9 +5,9 @@
     "test": "web-test-runner \"src/**/*.test.ts\""
   },
   "dependencies": {
-    "purecss": "^2.0.3",
+    "clipboard": "^2.0.6",
     "svelte": "^3.24.0",
-    "svelte-spins": "^1.0.0"
+    "svelte-spins": "^1.1.8"
   },
   "devDependencies": {
     "@snowpack/plugin-dotenv": "^2.0.5",
@@ -21,6 +21,7 @@
     "@web/test-runner": "^0.12.0",
     "chai": "^4.2.0",
     "snowpack": "^3.0.1",
+    "svelte-highlight": "^0.6.2",
     "svelte-preprocess": "^4.0.8",
     "typescript": "^4.0.0"
   }

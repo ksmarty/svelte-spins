@@ -1,6 +1,7 @@
 <script lang="ts">
     export let classes: string = "";
     export let style: string = "";
+    export let color: string = "black";
 </script>
 
 <style>
@@ -8,14 +9,11 @@
         position: relative;
     }
     .ball-clip-rotate-multiple > div {
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
         position: absolute;
         left: -20px;
         top: -20px;
-        border: 2px solid #fff;
-        border-bottom-color: transparent;
-        border-top-color: transparent;
+        border-bottom-color: transparent !important;
+        border-top-color: transparent !important;
         border-radius: 100%;
         height: 35px;
         width: 35px;
@@ -30,13 +28,54 @@
         height: 15px;
         -webkit-animation-duration: 0.5s;
         animation-duration: 0.5s;
-        border-color: #fff transparent #fff transparent;
         -webkit-animation-direction: reverse;
         animation-direction: reverse;
+    }
+    @-webkit-keyframes rotate {
+        0% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+        }
+        50% {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes rotate {
+        0% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+        }
+        50% {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes rotate {
+        0% {
+            -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
+        }
+        50% {
+            -webkit-transform: rotate(180deg) scale(0.6);
+            transform: rotate(180deg) scale(0.6);
+        }
+        100% {
+            -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+        }
     }
 </style>
 
 <div class={'ball-clip-rotate-multiple ' + classes} {style}>
-    <div />
-    <div />
+    <div style="border: 2px solid {color};" />
+    <div style="border: 2px solid {color};" />
 </div>

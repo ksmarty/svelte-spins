@@ -2,7 +2,7 @@
 
 > [loaders.css](https://github.com/ConnorAtherton/loaders.css) as Svelte components.
 
-A **zero dependency** spinner/loader library using [loaders.css](https://github.com/ConnorAtherton/loaders.cs) as Svelte components.
+A **zero dependency** spinner/loader library using [loaders.css](https://github.com/ConnorAtherton/loaders.css) as Svelte components.
 
 ## [Demo](https://svelte-spins-demo.vercel.app)
 
@@ -20,14 +20,16 @@ npm i svelte-spins
 
 ## Usage
 
-### Import
-
 ```svelte
 <script>
   import { BallPulseSync } from "svelte-spins";
+  let color = "red";
+  let classes = "button-loader";
+  let style="background: green; padding: 3rem;";
+
 </script>
 
-<BallPulseSync />
+<BallPulseSync {color} {classes} {style} />
 ```
 
 ## API
@@ -36,10 +38,11 @@ npm i svelte-spins
 
 All props are optional.
 
-| Name    | Value    | Function                    |
-| :------ | :------- | :-------------------------- |
-| classes | `string` | Classes to be applied       |
-| style   | `string` | Inline styles to be applied |
+| Name    | Value    | Default Value | Function                           |
+| :------ | :------- | :------------ | :--------------------------------- |
+| classes | `string` | `null`        | Classes to be applied              |
+| style   | `string` | `null`        | Inline styles to be applied        |
+| color   | `string` | `black`       | The foreground color of the loader |
 
 ## Loaders
 

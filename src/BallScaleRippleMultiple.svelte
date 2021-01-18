@@ -1,6 +1,7 @@
 <script lang="ts">
     export let classes: string = "";
     export let style: string = "";
+    export let color: string = "black";
 </script>
 
 <style>
@@ -34,7 +35,6 @@
         width: 50px;
         height: 50px;
         border-radius: 100%;
-        border: 2px solid #fff;
         -webkit-animation: ball-scale-ripple-multiple 1.25s 0s infinite
             cubic-bezier(0.21, 0.53, 0.56, 0.8);
         animation: ball-scale-ripple-multiple 1.25s 0s infinite
@@ -75,7 +75,7 @@
 </style>
 
 <div class={'ball-scale-ripple-multiple ' + classes} {style}>
-    <div />
-    <div />
-    <div />
+    <div style="border: 2px solid {color};" />
+    <div style="border: 2px solid {color};" />
+    <div style="border: 2px solid {color};" />
 </div>
