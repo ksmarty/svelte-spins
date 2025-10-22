@@ -38,39 +38,40 @@
         <Spins.BallPulseSync {color} />
         <h6 style="margin: 3rem 0 1rem">
             A <span class="bold">zero dependency</span> spinner library using
-            <a href="https://github.com/ConnorAtherton/loaders.css"
-                >loaders.css</a
-            > as Svelte components.
+            <a href="https://github.com/ConnorAtherton/loaders.css">
+                loaders.css
+            </a> as Svelte components.
         </h6>
         <h6>
-            <a href="https://kyleschwartz.ca" target="_blank"
-                >Built by Kyle Schwartz</a
-            >
+            <a href="https://kyleschwartz.ca" target="_blank">
+                Built by Kyle Schwartz
+            </a>
         </h6>
         <a
             class="button button-primary"
             href="https://github.com/ksmarty/svelte-spins"
-            target="_blank">View on GitHub</a
+            target="_blank"
         >
+            View on GitHub
+        </a>
     </header>
 
     <hr />
 
     <section>
         <h6 class="section-title">Install</h6>
-        <p>
-            <code>svelte-spins</code> can be installed using <code>yarn</code>
-            or <code>npm</code>.
-        </p>
         <div class="row">
-            <div class="six columns">
+            <div class="three columns">
                 <span>Bun:</span><br /><code>bun i svelte-spins</code>
             </div>
-            <div class="six columns">
-                <span>Yarn:</span><br /><code>yarn add svelte-spins</code>
+            <div class="three columns">
+                <span>npm:</span><br /><code>npm i svelte-spins</code>
             </div>
-            <div class="six columns">
-                <span>NPM:</span><br /><code>npm i svelte-spins</code>
+            <div class="three columns">
+                <span>pnpm:</span><br /><code>pnpm i svelte-spins</code>
+            </div>
+            <div class="three columns">
+                <span>Yarn:</span><br /><code>yarn add svelte-spins</code>
             </div>
         </div>
     </section>
@@ -118,14 +119,16 @@
 
     <section>
         <h6 class="section-title">Loaders</h6>
-        {#each loaders as name}
+        {#each loaders as name, index}
             <div class="row loader-example">
                 <div class="three columns"><span>{name}</span></div>
                 <div class="nine columns center">
                     <svelte:component this={Spins[name]} {color} />
                 </div>
             </div>
-            <hr />
+            {#if index !== loaders.length - 1}
+                <hr />
+            {/if}
         {/each}
     </section>
 
@@ -133,9 +136,9 @@
 
     <footer>
         <h6 class="section-title">License</h6>
-        <a href="https://github.com/ksmarty/svelte-spins/blob/main/LICENSE"
-            >© {new Date().getFullYear()} Kyle Schwartz</a
-        >
+        <a href="https://github.com/ksmarty/svelte-spins/blob/main/LICENSE">
+            © {new Date().getFullYear()} Kyle Schwartz
+        </a>
     </footer>
 </main>
 
