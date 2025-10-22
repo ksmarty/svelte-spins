@@ -1,9 +1,12 @@
 <script lang="ts">
-	import * as ClipboardJS from 'clipboard';
+	import '@fontsource-variable/raleway';
+	import ClipboardJS from 'clipboard';
 	import { onMount } from 'svelte';
 	import { HighlightSvelte } from 'svelte-highlight';
 	import { atomOneDark } from 'svelte-highlight/styles';
-	import * as Spins from 'svelte-spins';
+	import * as Spins from '../lib/index.ts';
+	import '../css/normalize.css';
+	import '../css/skeleton.css';
 
 	onMount(() => {
 		document
@@ -12,6 +15,7 @@
 		new ClipboardJS('code');
 	});
 
+	/* eslint no-useless-escape: "off" */
 	const importCode = `
 <script lang="ts">
   import { BallPulseSync } from "svelte-spins";
@@ -19,9 +23,9 @@
   let color = "red";
   let classes = "button-loader";
   let style="background: green; padding: 3rem;";
-<//script>
+<\/script>
 
-<BallPulseSync {color} {style} />
+<BallPulseSync {color} {style} \/>
      `.trim();
 
 	const color = '#f25f4c';
@@ -129,6 +133,7 @@
 	:global(html, body, main) {
 		background: #0f0e17;
 		color: #fffffe;
+		font-family: 'Raleway Variable', sans-serif;
 	}
 
 	:global(code) {
