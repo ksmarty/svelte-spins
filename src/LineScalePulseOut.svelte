@@ -4,6 +4,14 @@
     export let color: string = "black";
 </script>
 
+<div class={"line-scale-pulse-out " + classes} {style}>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+</div>
+
 <style>
     @-webkit-keyframes line-scale-pulse-out {
         0% {
@@ -44,8 +52,10 @@
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
         display: inline-block;
-        -webkit-animation: line-scale-pulse-out 0.9s -0.6s infinite cubic-bezier(0.85, 0.25, 0.37, 0.85);
-        animation: line-scale-pulse-out 0.9s -0.6s infinite cubic-bezier(0.85, 0.25, 0.37, 0.85);
+        -webkit-animation: line-scale-pulse-out 0.9s -0.6s infinite
+            cubic-bezier(0.85, 0.25, 0.37, 0.85);
+        animation: line-scale-pulse-out 0.9s -0.6s infinite
+            cubic-bezier(0.85, 0.25, 0.37, 0.85);
     }
     .line-scale-pulse-out > div:nth-child(2),
     .line-scale-pulse-out > div:nth-child(4) {
@@ -58,11 +68,3 @@
         animation-delay: -0.2s !important;
     }
 </style>
-
-<div class={'line-scale-pulse-out ' + classes} {style}>
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-</div>

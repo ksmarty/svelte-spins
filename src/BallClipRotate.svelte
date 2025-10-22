@@ -4,6 +4,10 @@
     export let color: string = "black";
 </script>
 
+<div class={"ball-clip-rotate " + classes} {style}>
+    <div style="border: 2px solid {color};"></div>
+</div>
+
 <style>
     .ball-clip-rotate > div {
         border-radius: 100%;
@@ -59,7 +63,3 @@
         }
     }
 </style>
-
-<div class={'ball-clip-rotate ' + classes} {style}>
-    <div style="border: 2px solid {color};" />
-</div>

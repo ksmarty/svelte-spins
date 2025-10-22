@@ -9,8 +9,8 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "validate": "svelte-check",
-    "prepublishOnly": "npm run build",
-    "create-index": "node scripts/createIndex.js"
+    "prepublishOnly": "bun run build",
+    "create-index": "bun scripts/createIndex.ts"
   },
   "files": [
     "src",
@@ -37,6 +37,11 @@
   "keywords": [
     "svelte"
   ],
+  "exports": {
+    ".": {
+      "svelte": "./dist/index.js"
+    }
+  },
   "git": {
     "scripts": {
       "pre-push": "vercel --prod"

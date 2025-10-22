@@ -4,15 +4,25 @@
     export let color: string = "black";
 </script>
 
+<div class={"ball-pulse " + classes} {style}>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+</div>
+
 <style>
     .ball-pulse > div:nth-child(1) {
-        -webkit-animation: scale 0.75s -0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
-        animation: scale 0.75s -0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+        -webkit-animation: scale 0.75s -0.24s infinite
+            cubic-bezier(0.2, 0.68, 0.18, 1.08);
+        animation: scale 0.75s -0.24s infinite
+            cubic-bezier(0.2, 0.68, 0.18, 1.08);
     }
 
     .ball-pulse > div:nth-child(2) {
-        -webkit-animation: scale 0.75s -0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
-        animation: scale 0.75s -0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+        -webkit-animation: scale 0.75s -0.12s infinite
+            cubic-bezier(0.2, 0.68, 0.18, 1.08);
+        animation: scale 0.75s -0.12s infinite
+            cubic-bezier(0.2, 0.68, 0.18, 1.08);
     }
 
     .ball-pulse > div:nth-child(3) {
@@ -32,9 +42,3 @@
         display: inline-block;
     }
 </style>
-
-<div class={'ball-pulse ' + classes} {style}>
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-</div>

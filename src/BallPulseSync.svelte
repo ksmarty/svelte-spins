@@ -4,6 +4,12 @@
     export let color: string = "black";
 </script>
 
+<div class={"ball-pulse-sync " + classes} {style}>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+</div>
+
 <style>
     @keyframes ball-pulse-sync {
         33% {
@@ -61,9 +67,3 @@
         }
     }
 </style>
-
-<div class={'ball-pulse-sync ' + classes} {style}>
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-</div>

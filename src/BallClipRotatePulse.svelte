@@ -4,6 +4,11 @@
     export let color: string = "black";
 </script>
 
+<div class={"ball-clip-rotate-pulse " + classes} {style}>
+    <div style="background-color: {color};"></div>
+    <div style="border-color: {color} transparent;" />
+</div>
+
 <style>
     @keyframes rotate {
         0% {
@@ -66,8 +71,3 @@
         animation-duration: 1s;
     }
 </style>
-
-<div class={'ball-clip-rotate-pulse ' + classes} {style}>
-    <div style="background-color: {color};" />
-    <div style="border-color: {color} transparent;" />
-</div>

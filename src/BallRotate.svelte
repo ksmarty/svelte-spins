@@ -4,6 +4,10 @@
     export let color: string = "black";
 </script>
 
+<div class={"ball-rotate " + classes} {style}>
+    <div style="background-color: {color};"></div>
+</div>
+
 <style>
     @keyframes rotate {
         0% {
@@ -88,7 +92,3 @@
         background-color: inherit;
     }
 </style>
-
-<div class={'ball-rotate ' + classes} {style}>
-    <div style="background-color: {color};" />
-</div>

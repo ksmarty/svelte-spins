@@ -1,9 +1,8 @@
-const autoPreprocess = require('svelte-preprocess');
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
-module.exports = {
-  preprocess: autoPreprocess({
-    defaults: {
-      script: 'typescript',
-    },
-  }),
-};
+/** @type {import("@sveltejs/vite-plugin-svelte").SvelteConfig} */
+export default {
+  // Consult https://svelte.dev/docs#compile-time-svelte-preprocess
+  // for more information about preprocessors
+  preprocess: vitePreprocess(),
+}

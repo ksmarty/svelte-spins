@@ -4,6 +4,12 @@
     export let color: string = "black";
 </script>
 
+<div class={"ball-triangle-path " + classes} {style}>
+    <div style="background-color: {color}; border: 1px solid {color};"></div>
+    <div style="background-color: {color}; border: 1px solid {color};"></div>
+    <div style="background-color: {color}; border: 1px solid {color};"></div>
+</div>
+
 <style>
     .ball-triangle-path {
         position: relative;
@@ -154,9 +160,3 @@
         }
     }
 </style>
-
-<div class={'ball-triangle-path ' + classes} {style}>
-    <div style="background-color: {color}; border: 1px solid {color};" />
-    <div style="background-color: {color}; border: 1px solid {color};" />
-    <div style="background-color: {color}; border: 1px solid {color};" />
-</div>

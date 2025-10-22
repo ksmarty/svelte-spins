@@ -4,6 +4,17 @@
     export let color: string = "black";
 </script>
 
+<div class={"ball-spin-fade-loader " + classes} {style}>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+</div>
+
 <style>
     @-webkit-keyframes ball-spin-fade-loader {
         50% {
@@ -95,14 +106,3 @@
         position: absolute;
     }
 </style>
-
-<div class={'ball-spin-fade-loader ' + classes} {style}>
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-</div>

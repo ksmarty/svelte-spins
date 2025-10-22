@@ -4,6 +4,12 @@
     export let color: string = "black";
 </script>
 
+<div class={"semi-circle-spin " + classes} {style}>
+    <div
+        style="background-image: linear-gradient(transparent 0%, transparent 70%, {color} 30%, {color} 100%);"
+    ></div>
+</div>
+
 <style>
     .semi-circle-spin {
         position: relative;
@@ -50,8 +56,3 @@
         }
     }
 </style>
-
-<div class={'semi-circle-spin ' + classes} {style}>
-    <div
-        style="background-image: linear-gradient(transparent 0%, transparent 70%, {color} 30%, {color} 100%);" />
-</div>

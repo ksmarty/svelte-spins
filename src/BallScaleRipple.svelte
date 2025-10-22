@@ -4,6 +4,10 @@
     export let color: string = "black";
 </script>
 
+<div class={"ball-scale-ripple " + classes} {style}>
+    <div style="border: 2px solid {color};"></div>
+</div>
+
 <style>
     @-webkit-keyframes ball-scale-ripple {
         0% {
@@ -49,7 +53,3 @@
             cubic-bezier(0.21, 0.53, 0.56, 0.8);
     }
 </style>
-
-<div class={'ball-scale-ripple ' + classes} {style}>
-    <div style="border: 2px solid {color};" />
-</div>

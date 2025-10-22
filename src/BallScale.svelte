@@ -4,6 +4,10 @@
     export let color: string = "black";
 </script>
 
+<div class={"ball-scale " + classes} {style}>
+    <div style="background-color: {color};"></div>
+</div>
+
 <style>
     @-webkit-keyframes ball-scale {
         0% {
@@ -71,7 +75,3 @@
         animation: ball-scale 1s 0s ease-in-out infinite;
     }
 </style>
-
-<div class={'ball-scale ' + classes} {style}>
-    <div style="background-color: {color};" />
-</div>

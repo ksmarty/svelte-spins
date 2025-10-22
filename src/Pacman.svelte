@@ -4,6 +4,18 @@
     export let color: string = "black";
 </script>
 
+<div class={"pacman " + classes} {style}>
+    <div
+        style="border-top: 25px solid {color}; border-left: 25px solid {color}; border-bottom: 25px solid {color};"
+    />
+    <div
+        style="border-top: 25px solid {color}; border-left: 25px solid {color}; border-bottom: 25px solid {color};"
+    />
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+</div>
+
 <style>
     @-webkit-keyframes rotate_pacman_half_up {
         0% {
@@ -142,13 +154,3 @@
         left: 70px;
     }
 </style>
-
-<div class={'pacman ' + classes} {style}>
-    <div
-        style="border-top: 25px solid {color}; border-left: 25px solid {color}; border-bottom: 25px solid {color};" />
-    <div
-        style="border-top: 25px solid {color}; border-left: 25px solid {color}; border-bottom: 25px solid {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-</div>

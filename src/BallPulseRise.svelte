@@ -4,6 +4,14 @@
     export let color: string = "black";
 </script>
 
+<div class={"ball-pulse-rise " + classes} {style}>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+</div>
+
 <style>
     @-webkit-keyframes ball-pulse-rise-even {
         0% {
@@ -132,11 +140,3 @@
         animation-name: ball-pulse-rise-odd;
     }
 </style>
-
-<div class={'ball-pulse-rise ' + classes} {style}>
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-</div>

@@ -1,8 +1,14 @@
-<script lang="ts">
+<script module lang="ts">
     export let classes: string = "";
     export let style: string = "";
     export let color: string = "black";
 </script>
+
+<div class={"ball-beat " + classes} {style}>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+</div>
 
 <style>
     @-webkit-keyframes ball-beat {
@@ -48,9 +54,3 @@
         animation-delay: -0.35s !important;
     }
 </style>
-
-<div class={'ball-beat ' + classes} {style}>
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-</div>

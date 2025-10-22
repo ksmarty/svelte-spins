@@ -4,6 +4,11 @@
     export let color: string = "black";
 </script>
 
+<div class={"cube-transition " + classes} {style}>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+</div>
+
 <style>
     @-webkit-keyframes cube-transition {
         25% {
@@ -65,8 +70,3 @@
         animation-delay: -0.8s;
     }
 </style>
-
-<div class={'cube-transition ' + classes} {style}>
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-</div>

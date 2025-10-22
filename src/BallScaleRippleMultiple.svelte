@@ -4,6 +4,12 @@
     export let color: string = "black";
 </script>
 
+<div class={"ball-scale-ripple-multiple " + classes} {style}>
+    <div style="border: 2px solid {color};"></div>
+    <div style="border: 2px solid {color};"></div>
+    <div style="border: 2px solid {color};"></div>
+</div>
+
 <style>
     .ball-scale-ripple-multiple {
         position: relative;
@@ -73,9 +79,3 @@
         }
     }
 </style>
-
-<div class={'ball-scale-ripple-multiple ' + classes} {style}>
-    <div style="border: 2px solid {color};" />
-    <div style="border: 2px solid {color};" />
-    <div style="border: 2px solid {color};" />
-</div>

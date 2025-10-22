@@ -4,6 +4,17 @@
     export let color: string = "black";
 </script>
 
+<div class={"line-spin-fade-loader " + classes} {style}>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+</div>
+
 <style>
     @-webkit-keyframes line-spin-fade-loader {
         50% {
@@ -31,7 +42,8 @@
     .line-spin-fade-loader > div:nth-child(1) {
         top: 20px;
         left: 0;
-        -webkit-animation: line-spin-fade-loader 1.2s -0.84s infinite ease-in-out;
+        -webkit-animation: line-spin-fade-loader 1.2s -0.84s infinite
+            ease-in-out;
         animation: line-spin-fade-loader 1.2s -0.84s infinite ease-in-out;
     }
     .line-spin-fade-loader > div:nth-child(2) {
@@ -39,7 +51,8 @@
         left: 13.63636px;
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
-        -webkit-animation: line-spin-fade-loader 1.2s -0.72s infinite ease-in-out;
+        -webkit-animation: line-spin-fade-loader 1.2s -0.72s infinite
+            ease-in-out;
         animation: line-spin-fade-loader 1.2s -0.72s infinite ease-in-out;
     }
     .line-spin-fade-loader > div:nth-child(3) {
@@ -55,13 +68,15 @@
         left: 13.63636px;
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
-        -webkit-animation: line-spin-fade-loader 1.2s -0.48s infinite ease-in-out;
+        -webkit-animation: line-spin-fade-loader 1.2s -0.48s infinite
+            ease-in-out;
         animation: line-spin-fade-loader 1.2s -0.48s infinite ease-in-out;
     }
     .line-spin-fade-loader > div:nth-child(5) {
         top: -20px;
         left: 0;
-        -webkit-animation: line-spin-fade-loader 1.2s -0.36s infinite ease-in-out;
+        -webkit-animation: line-spin-fade-loader 1.2s -0.36s infinite
+            ease-in-out;
         animation: line-spin-fade-loader 1.2s -0.36s infinite ease-in-out;
     }
     .line-spin-fade-loader > div:nth-child(6) {
@@ -69,7 +84,8 @@
         left: -13.63636px;
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
-        -webkit-animation: line-spin-fade-loader 1.2s -0.24s infinite ease-in-out;
+        -webkit-animation: line-spin-fade-loader 1.2s -0.24s infinite
+            ease-in-out;
         animation: line-spin-fade-loader 1.2s -0.24s infinite ease-in-out;
     }
     .line-spin-fade-loader > div:nth-child(7) {
@@ -77,7 +93,8 @@
         left: -20px;
         -webkit-transform: rotate(90deg);
         transform: rotate(90deg);
-        -webkit-animation: line-spin-fade-loader 1.2s -0.12s infinite ease-in-out;
+        -webkit-animation: line-spin-fade-loader 1.2s -0.12s infinite
+            ease-in-out;
         animation: line-spin-fade-loader 1.2s -0.12s infinite ease-in-out;
     }
     .line-spin-fade-loader > div:nth-child(8) {
@@ -101,14 +118,3 @@
         height: 15px;
     }
 </style>
-
-<div class={'line-spin-fade-loader ' + classes} {style}>
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-</div>

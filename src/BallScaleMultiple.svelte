@@ -4,6 +4,12 @@
     export let color: string = "black";
 </script>
 
+<div class={"ball-scale-multiple " + classes} {style}>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+</div>
+
 <style>
     @-webkit-keyframes ball-scale-multiple {
         0% {
@@ -68,9 +74,3 @@
         animation: ball-scale-multiple 1s 0s linear infinite;
     }
 </style>
-
-<div class={'ball-scale-multiple ' + classes} {style}>
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-</div>

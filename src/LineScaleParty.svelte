@@ -4,6 +4,13 @@
     export let color: string = "black";
 </script>
 
+<div class={"line-scale-party " + classes} {style}>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+</div>
+
 <style>
     @-webkit-keyframes line-scale-party {
         0% {
@@ -80,10 +87,3 @@
         animation-delay: 0;
     }
 </style>
-
-<div class={'line-scale-party ' + classes} {style}>
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-</div>

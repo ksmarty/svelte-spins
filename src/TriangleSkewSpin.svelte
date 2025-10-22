@@ -4,6 +4,10 @@
     export let color: string = "black";
 </script>
 
+<div class={"triangle-skew-spin " + classes} {style}>
+    <div style="border-bottom: 20px solid {color};"></div>
+</div>
+
 <style>
     @-webkit-keyframes triangle-skew-spin {
         25% {
@@ -57,7 +61,3 @@
             infinite;
     }
 </style>
-
-<div class={'triangle-skew-spin ' + classes} {style}>
-    <div style="border-bottom: 20px solid {color};" />
-</div>

@@ -4,6 +4,14 @@
     export let color: string = "black";
 </script>
 
+<div class={"line-scale " + classes} {style}>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+</div>
+
 <style>
     @-webkit-keyframes line-scale {
         0% {
@@ -35,23 +43,31 @@
     }
 
     .line-scale > div:nth-child(1) {
-        -webkit-animation: line-scale 1s -0.4s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
-        animation: line-scale 1s -0.4s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+        -webkit-animation: line-scale 1s -0.4s infinite
+            cubic-bezier(0.2, 0.68, 0.18, 1.08);
+        animation: line-scale 1s -0.4s infinite
+            cubic-bezier(0.2, 0.68, 0.18, 1.08);
     }
 
     .line-scale > div:nth-child(2) {
-        -webkit-animation: line-scale 1s -0.3s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
-        animation: line-scale 1s -0.3s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+        -webkit-animation: line-scale 1s -0.3s infinite
+            cubic-bezier(0.2, 0.68, 0.18, 1.08);
+        animation: line-scale 1s -0.3s infinite
+            cubic-bezier(0.2, 0.68, 0.18, 1.08);
     }
 
     .line-scale > div:nth-child(3) {
-        -webkit-animation: line-scale 1s -0.2s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
-        animation: line-scale 1s -0.2s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+        -webkit-animation: line-scale 1s -0.2s infinite
+            cubic-bezier(0.2, 0.68, 0.18, 1.08);
+        animation: line-scale 1s -0.2s infinite
+            cubic-bezier(0.2, 0.68, 0.18, 1.08);
     }
 
     .line-scale > div:nth-child(4) {
-        -webkit-animation: line-scale 1s -0.1s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
-        animation: line-scale 1s -0.1s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+        -webkit-animation: line-scale 1s -0.1s infinite
+            cubic-bezier(0.2, 0.68, 0.18, 1.08);
+        animation: line-scale 1s -0.1s infinite
+            cubic-bezier(0.2, 0.68, 0.18, 1.08);
     }
 
     .line-scale > div:nth-child(5) {
@@ -71,11 +87,3 @@
         display: inline-block;
     }
 </style>
-
-<div class={'line-scale ' + classes} {style}>
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-</div>

@@ -4,6 +4,11 @@
     export let color: string = "black";
 </script>
 
+<div class={"ball-zig-zag " + classes} {style}>
+    <div style="background-color: {color};"></div>
+    <div style="background-color: {color};"></div>
+</div>
+
 <style>
     .ball-zig-zag {
         position: relative;
@@ -91,8 +96,3 @@
         }
     }
 </style>
-
-<div class={'ball-zig-zag ' + classes} {style}>
-    <div style="background-color: {color};" />
-    <div style="background-color: {color};" />
-</div>

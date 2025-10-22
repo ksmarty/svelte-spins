@@ -4,6 +4,10 @@
     export let color: string = "black";
 </script>
 
+<div class={"square-spin " + classes} {style}>
+    <div style="background-color: {color};"></div>
+</div>
+
 <style>
     @-webkit-keyframes square-spin {
         25% {
@@ -57,7 +61,3 @@
             infinite;
     }
 </style>
-
-<div class={'square-spin ' + classes} {style}>
-    <div style="background-color: {color};" />
-</div>

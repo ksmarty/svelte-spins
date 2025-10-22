@@ -4,6 +4,11 @@
     export let color: string = "black";
 </script>
 
+<div class={"ball-clip-rotate-multiple " + classes} {style}>
+    <div style="border: 2px solid {color};"></div>
+    <div style="border: 2px solid {color};"></div>
+</div>
+
 <style>
     .ball-clip-rotate-multiple {
         position: relative;
@@ -74,8 +79,3 @@
         }
     }
 </style>
-
-<div class={'ball-clip-rotate-multiple ' + classes} {style}>
-    <div style="border: 2px solid {color};" />
-    <div style="border: 2px solid {color};" />
-</div>
