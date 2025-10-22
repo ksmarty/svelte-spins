@@ -1,80 +1,58 @@
-# svelte-spins
+# Svelte library
 
-> [loaders.css](https://github.com/ConnorAtherton/loaders.css) as Svelte components.
+Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
 
-A **zero dependency** spinner/loader library using [loaders.css](https://github.com/ConnorAtherton/loaders.css) as Svelte components.
+Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
 
-## [Demo](https://svelte-spins-demo.vercel.app)
+## Creating a project
 
-## Install
+If you're seeing this, you've probably already done this step. Congrats!
 
-`svelte-spins` can be installed using `yarn` or `npm`.
+```sh
+# create a new project in the current directory
+npx sv create
 
-```bash
-yarn add svelte-spins
+# create a new project in my-app
+npx sv create my-app
 ```
 
-```bash
-npm i svelte-spins
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```sh
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
 
-## Usage
+Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
 
-```svelte
-<script>
-  import { BallPulseSync } from "svelte-spins";
-  let color = "red";
-  let classes = "button-loader";
-  let style="background: green; padding: 3rem;";
+## Building
 
-</script>
+To build your library:
 
-<BallPulseSync {color} {classes} {style} />
+```sh
+npm pack
 ```
 
-## API
+To create a production version of your showcase app:
 
-### Props
+```sh
+npm run build
+```
 
-All props are optional.
+You can preview the production build with `npm run preview`.
 
-| Name    | Value    | Default Value | Function                           |
-| :------ | :------- | :------------ | :--------------------------------- |
-| classes | `string` | `null`        | Classes to be applied              |
-| style   | `string` | `null`        | Inline styles to be applied        |
-| color   | `string` | `black`       | The foreground color of the loader |
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
 
-## Loaders
+## Publishing
 
--   BallBeat
--   BallClipRotate
--   BallClipRotateMultiple
--   BallClipRotatePulse
--   BallGridBeat
--   BallGridPulse
--   BallPulse
--   BallPulseRise
--   BallPulseSync
--   BallRotate
--   BallScale
--   BallScaleMultiple
--   BallScaleRipple
--   BallScaleRippleMultiple
--   BallSpinFadeLoader
--   BallTrianglePath
--   BallZigZag
--   BallZigZagDeflect
--   CubeTransition
--   LineScale
--   LineScaleParty
--   LineScalePulseOut
--   LineScalePulseOutRapid
--   LineSpinFadeLoader
--   Pacman
--   SemiCircleSpin
--   SquareSpin
--   TriangleSkewSpin
+Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
 
-## License
+To publish your library to [npm](https://www.npmjs.com):
 
-[MIT](LICENSE)
+```sh
+npm publish
+```

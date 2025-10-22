@@ -1,37 +1,33 @@
 // Run `node scripts/createIndex.js`
 
-import { readdir, writeFileSync } from "fs";
-import { extname, basename } from "path";
+import { readdir, writeFile } from 'node:fs/promises';
+import { extname, basename } from 'path';
 
-const dir = "./src";
+const dir = './src/lib';
 
-const importsArr: string[] = [];
-const exportsArr: string[] = [];
+const files = await readdir(dir);
 
-readdir(dir, (err, files) => {
-  if (err) throw err;
+const arr = files
+	.toSorted()
+	.map((file) => {
+		if (extname(file) !== '.svelte') return '';
 
-  files.toSorted().forEach((file) => {
-    if (extname(file) === ".svelte") {
-      const name = basename(file, ".svelte");
-      importsArr.push(name);
-      exportsArr.push(name);
-    }
-  });
+		return basename(file, '.svelte');
+	})
+	.filter(Boolean);
 
-  const imports = importsArr
-    .map((name) => `import ${name} from "./${name}.svelte";`)
-    .join("\n");
+const imports = arr.map((name) => `import ${name} from './${name}.svelte';`).join('\n');
 
-  const exports = `export {
-  ${exportsArr.join(", \n  ")}
-};`.trim();
+const exports = `
+export {
+  ${arr.join(', \n  ')}
+};
+`;
 
-  const text = "// This file was auto-generated\n" + imports + "\n" + exports;
+const text = '// This file was auto-generated\n\n' + imports + '\n' + exports;
 
-  try {
-    writeFileSync("./src/index.ts", text);
-  } catch (err) {
-    console.error(err);
-  }
-});
+try {
+	await writeFile('./src/lib/index.ts', text);
+} catch (err) {
+	console.error(err);
+}
